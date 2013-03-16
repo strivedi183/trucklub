@@ -3,7 +3,7 @@
   var trucks = [];
 
 .row
-  .large-4.columns
+  .large-4.columns.small-12
     %table
       %thead
         %thead
@@ -18,6 +18,6 @@
           %tr
             %td= location.truck.title
             %td= location.truck.description
-            %td= location.truck.twitter
-  .large-8.columns
+            %td= link_to(location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
+  .large-8.small-12.columns
     #map_canvas
