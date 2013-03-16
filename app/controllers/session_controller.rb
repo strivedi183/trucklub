@@ -6,7 +6,7 @@ class SessionController < ApplicationController
     @auth = User.where(:email => params[:email]).first
     if @auth.present? && @auth.authenticate(params[:password])
       session[:user_id] = @auth.id
-      redirect_to root_path
+      redirect_to trucks_path
     else
       session[:user_id] = nil
       redirect_to login_path
@@ -15,5 +15,6 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    redirect_to root_path
   end
 end
