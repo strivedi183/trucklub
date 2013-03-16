@@ -8,13 +8,21 @@ describe 'Trucks' do
     it 'displays lists of trucks' do
       create_trucks
       visit trucks_path
-      page.find('td', :text => 'Fishing Shrimp')
+      page.has_content?('Fishing Shrimp')
+      page.has_content?('Lukes Lobsters')
+      page.has_content?('Mud Truck')
     end
 
-    it 'displays a map of truck locations with 3 pins' do
+    it 'does not display a truck that is not there' do
       create_trucks
       visit trucks_path
-      # count pins
+      page.has_content?('Ralphs Truck')
+    end
+
+    it 'displays a google map' do
+      create_trucks
+      visit trucks_path
+      page.has_content?('#map_canvas')
     end
   end
 end
