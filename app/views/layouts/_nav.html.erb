@@ -17,13 +17,14 @@
         <li class="divider"></li>
         <li><%= link_to('See our trucks', trucks_path) %></li>
         <li class="divider"></li>
+        <% if @auth %>
+        <li><%= link_to_function "My Loyalty Card", 'show_card();', :class => "button radius" %></li>
+        <% end %>
       </ul>
 
       <ul class="right">
         <li class="divider"></li>
         <%== login_nav %>
-
-
         <li class="divider"></li>
         <li><%= link_to('Register', new_user_path) %></li>
         <li class="divider"></li>
