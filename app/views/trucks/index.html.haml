@@ -1,0 +1,15 @@
+%h1 Trucks
+
+%table
+  %thead
+    %thead
+      %tr
+        %th Truck Name
+        %th Description
+        %th Twitter
+    %tbody
+    - @trucks.each do |truck|
+      %tr
+        %td= truck.title
+        %td= truck.description
+        %td= truck.twitter

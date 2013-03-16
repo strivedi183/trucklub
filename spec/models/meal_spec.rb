@@ -36,8 +36,10 @@ describe Meal do
     it 'has meal properties' do
       meal = Meal.create
       expect(meal.id).to_not be nil
+
       # expect(meal.meal_date).to eq(expected) Date.current
       # expect(meal.meal_time).to eq(expected) Time.now
+
     end
   end
 end
