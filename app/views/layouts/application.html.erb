@@ -21,11 +21,16 @@
 
 </div>
 
-<%= render :partial => 'layouts/footer' %>
+
 
 
 <script>
+  $('#card').hide();
   $(document).foundation();
+  function show_card(){
+    $('#card').fadeToggle();
+  }
+
 </script>
 </body>
 </html>
