@@ -12,5 +12,7 @@
 #
 
 class Truck < ActiveRecord::Base
+  attr_accessible :title, :description, :twitter, :phone
   has_one :user, :as => :userable
+  validates :title, :description, :twitter, :phone, :presence => true
 end

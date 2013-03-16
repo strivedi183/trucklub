@@ -9,5 +9,7 @@
 #
 
 class Eater < ActiveRecord::Base
+  attr_accessible :location
   has_one :user, :as => :userable
+  validates :location, :presence => true
 end

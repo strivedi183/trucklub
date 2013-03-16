@@ -43,13 +43,13 @@ describe User do
   describe '#truck' do
     it 'returns a Truck object' do
       user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
-      truck = Truck.create()
+      truck = Truck.create(title: 'test', description: 'test', twitter: 'test', phone: 'test')
       truck.user = user
       expect(user.is_truck?).to be_an_instance_of(Truck)
     end
     it 'return nil when the user is not a truck' do
       user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
-      eater = Eater.create()
+      eater = Eater.create(location: 'test')
       eater.user = user
       expect(user.is_truck?).to be nil
     end
@@ -58,13 +58,13 @@ describe User do
   describe '#eater' do
     it 'returns a Eater object' do
       user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
-      eater = Eater.create()
+      eater = Eater.create(location: 'test')
       eater.user = user
       expect(user.is_eater?).to be_an_instance_of(Eater)
     end
     it 'return nil when the user is not an eater' do
       user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
-      truck = Truck.create()
+      truck = Truck.create(title: 'test', description: 'test', twitter: 'test', phone: 'test')
       truck.user = user
       expect(user.is_eater?).to be nil
     end
