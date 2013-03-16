@@ -1,0 +1,11 @@
+.row
+  .large-12.columns.spacer
+.row
+  .large-4.large-centered.columns
+    = form_tag '/login' do
+      = label_tag :email
+      = text_field_tag :email
+      = label_tag :password
+      = password_field_tag :password
+      = button_tag 'Cancel', root_path
+      = submit_tag 'Get Truckin', :class => 'button small success'
