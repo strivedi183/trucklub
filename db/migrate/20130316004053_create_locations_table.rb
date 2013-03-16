@@ -7,6 +7,7 @@ class CreateLocationsTable < ActiveRecord::Migration
       t.string  :address
       t.float   :latitude
       t.float   :longitude
+      t.integer :truck_id
       t.string  :secret_code
       t.timestamps
     end

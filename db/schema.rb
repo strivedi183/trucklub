@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130316011345) do
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "truck_id"
     t.string   "secret_code"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
