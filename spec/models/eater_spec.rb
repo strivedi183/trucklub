@@ -10,8 +10,6 @@
 
 require 'spec_helper'
 
-require 'spec_helper'
-
 describe Eater do
   describe '.new' do
     it 'creates an instance of Eater' do
