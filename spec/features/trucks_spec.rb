@@ -2,18 +2,21 @@ require 'spec_helper'
 
 
 describe 'Trucks' do
-  describe 'GET /trucks' do
-    it 'displays lists of trucks' do
-    create_trucks
-    visit trucks_path
-    page.find('td', :text => 'Fishing Shrimp')
-  end
 
-  it 'displays a map of truck locations with 3 pins' do
-    create_trucks
-    visit trucks_path
-    # count pins
- end
+  describe 'GET /trucks' do
+
+    it 'displays lists of trucks' do
+      create_trucks
+      visit trucks_path
+      page.find('td', :text => 'Fishing Shrimp')
+    end
+
+    it 'displays a map of truck locations with 3 pins' do
+      create_trucks
+      visit trucks_path
+      # count pins
+    end
+  end
 end
 
 

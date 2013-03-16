@@ -1,5 +1,5 @@
 $(function() {
-  display_map(40.7482845,-73.9855692, 10);
+  display_map(40.7482845,-73.9855692, 12);
   populate_map();
   var ralph = 'boo';
 });
