@@ -31,7 +31,7 @@ describe 'Location' do
 
     it 'generates a secret word' do
       location = Location.create(location_date: '2013-01-20', arrival_time: '10:00', departure_time: '14:00', address: 'Empire State Building, NYC' )
-      expect(location.secret_code).should_not be_nil
+      expect(location.secret_code).to_not be_nil
     end
 
   end
