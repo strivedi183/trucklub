@@ -9,6 +9,7 @@
 #  address        :string(255)
 #  latitude       :float
 #  longitude      :float
+#  truck_id       :integer
 #  secret_code    :string(255)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
