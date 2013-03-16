@@ -10,5 +10,9 @@ describe 'Welcome' do
       visit root_path
       page.should have_link('Register')
     end
+    it 'displays Welcome text' do
+      visit root_path
+      page.should have_text('trucKlub')
+    end
   end
 end
