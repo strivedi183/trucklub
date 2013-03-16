@@ -1,6 +1,15 @@
 Truck.delete_all
 Location.delete_all
+User.delete_all
+Eater.delete_all
 
+u1 = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
+u2 = User.create(name: 'joe', email: 'joe@gmail.com', password: 'a', password_confirmation: 'a')
+u3 = User.create(name: 'sue', email: 'sue@gmail.com', password: 'a', password_confirmation: 'a')
+
+e1 = Eater.create(location: '10 East 21st Street, NY, NY')
+e2 = Eater.create(location: '10 East 21st Street, NY, NY')
+e3 = Eater.create(location: '10 East 21st Street, NY, NY')
 
 t1 = Truck.create(:title => 'Fishing Shrimp', :description => 'Seafood', :twitter => 'FishingShrimp' , :phone => '914-649-8398')
 t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitter => 'LukesLobsterNY' , :phone => '917-922-2816')
@@ -17,3 +26,7 @@ l2.truck = t2
 l2.save
 l3.truck = t3
 l3.save
+
+e1.user = u1
+e2.user = u2
+e3.user = u3
