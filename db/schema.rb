@@ -11,6 +11,52 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130316011345) do
+
+  create_table "eaters", :force => true do |t|
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "locations", :force => true do |t|
+    t.date     "location_date"
+    t.time     "arrival_time"
+    t.time     "departure_time"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "secret_code"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "meals", :force => true do |t|
+    t.date     "meal_date"
+    t.time     "meal_time"
+    t.integer  "eater_id"
+    t.integer  "truck_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trucks", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "twitter"
+    t.string   "phone"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.integer  "userable_id"
+    t.string   "userable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
 end

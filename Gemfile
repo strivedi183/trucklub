@@ -7,6 +7,7 @@ gem 'haml'
 gem 'bcrypt-ruby'
 gem 'geocoder'
 gem 'twilio-ruby'
+gem "random-word", "~> 1.3.0"
 
 group :assets do
   gem 'sass-rails'

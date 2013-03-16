@@ -1,4 +1,4 @@
-class Welcome < ActiveRecord::Base
+class Welcome
 
 
 end
