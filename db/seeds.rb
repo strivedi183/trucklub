@@ -27,6 +27,10 @@ l2.save
 l3.truck = t3
 l3.save
 
+t1.locations << l1
+t2.locations << l2
+t3.locations << l3
+
 e1.user = u1
 e2.user = u2
 e3.user = u3
