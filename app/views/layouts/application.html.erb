@@ -10,20 +10,27 @@
 
 </head>
 <body>
-<%= render :partial => 'layouts/nav' %>
 
+<%= render :partial => 'layouts/nav' %>
+<%= render(:partial => 'users/card') %>
 <div class="row">
+
 
 <%= yield %>
 
 
 </div>
 
-<%= render :partial => 'layouts/footer' %>
+
 
 
 <script>
+  $('#card').hide();
   $(document).foundation();
+  function show_card(){
+    $('#card').fadeToggle();
+  }
+
 </script>
 </body>
 </html>

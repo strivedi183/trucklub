@@ -39,7 +39,7 @@ class Location < ActiveRecord::Base
   end
 
   def generate_secret
-    RandomWord.exclude_list << /_/
+    RandomWord.exclude_list << /_/ << /^.{7,100}$/ #don't show words with underscores or greater than 7 chars
     self.secret_code = RandomWord.nouns.first
   end
 
