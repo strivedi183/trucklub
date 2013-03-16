@@ -13,14 +13,19 @@
 
     <section class="top-bar-section">
       <!-- Right Nav Section -->
+      <ul class="left">
+        <li class="divider"></li>
+        <li><%= link_to('See our trucks', trucks_path) %></li>
+        <li class="divider"></li>
+      </ul>
+
       <ul class="right">
         <li class="divider"></li>
-
         <%== login_nav %>
 
 
         <li class="divider"></li>
-        <li><%= link_to('Register', '#') %></li>
+        <li><%= link_to('Register', new_user_path) %></li>
         <li class="divider"></li>
 
       </ul>
