@@ -22,6 +22,7 @@ class Location < ActiveRecord::Base
   before_save :geocode, :generate_secret
   #validates :truck_id, :presence => true
 
+
   private
   def geocode
     result = Geocoder.search(self.address).first
