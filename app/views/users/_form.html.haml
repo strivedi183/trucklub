@@ -1,0 +1,18 @@
+.row
+  .large-12.columns.spacer
+.row
+  .large-4.large-centered.columns
+    / = render(:partial => 'shared/errors', :locals => {:object => @user})
+    = form_for @user do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :email
+      = f.text_field :email
+      = f.label :password
+      = f.password_field :password
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+      = label_tag :location
+      = text_field_tag :location
+      = link_to 'Cancel', root_path, :class => 'button small alert'
+      = f.submit nil, :class => 'button small success'
