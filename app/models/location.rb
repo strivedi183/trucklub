@@ -20,6 +20,7 @@ class Location < ActiveRecord::Base
   attr_accessible :location_date, :arrival_time, :departure_time, :address
   belongs_to :truck
   before_save :geocode, :generate_secret
+  validates :truck_id, :presence => true
 
   private
   def geocode
