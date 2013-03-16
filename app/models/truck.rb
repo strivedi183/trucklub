@@ -11,3 +11,6 @@
 #  updated_at  :datetime         not null
 #
 
+class Truck < ActiveRecord::Base
+  has_one :user, :as => :userable
+end

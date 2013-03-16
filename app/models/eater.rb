@@ -8,3 +8,6 @@
 #  updated_at :datetime         not null
 #
 
+class Eater < ActiveRecord::Base
+  has_one :user, :as => :userable
+end
