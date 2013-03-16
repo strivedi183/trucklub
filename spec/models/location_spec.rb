@@ -30,9 +30,10 @@ describe 'Location' do
       expect(location.longitude).to eq(-73.9855692)
     end
 
-    it 'generates a secret word' do
+    it 'generates a secret word no longer than 7 characters' do
       location = Location.create(location_date: '2013-01-20', arrival_time: '10:00', departure_time: '14:00', address: 'Empire State Building, NYC' )
       expect(location.secret_code).to_not be_nil
+      expect(location.secret_code.length).to be < 7
     end
 
   end
