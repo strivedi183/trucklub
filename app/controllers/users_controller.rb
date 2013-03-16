@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
     location = params[:location]
     if location.present?
       user = User.create(params[:user])
@@ -16,7 +15,6 @@ class UsersController < ApplicationController
       eater.user = user
       eater.save
     end
-    binding.pry
     redirect_to trucks_path
   end
 
