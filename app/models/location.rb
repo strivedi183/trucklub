@@ -14,11 +14,12 @@
 #  updated_at     :datetime         not null
 #
 
+require 'random-word'
 class Location < ActiveRecord::Base
   attr_accessible :location_date, :arrival_time, :departure_time, :address
 
 
-  before_save :geocode
+  before_save :geocode, :generate_secret
 
   private
   def geocode
@@ -29,4 +30,11 @@ class Location < ActiveRecord::Base
       self.longitude = result.longitude
     end
   end
+
+  def generate_secret
+    RandomWord.exclude_list << /_/
+    self.secret_code = RandomWord.nouns.first
+  end
+
+
 end
