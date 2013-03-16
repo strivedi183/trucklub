@@ -12,7 +12,7 @@ describe 'Session' do
     it 'displays the login form' do
       visit root_path
       click_link('Login to trucKlub')
-      page.should have_button('Cancel')
+      page.should have_link('Cancel')
       page.should have_button('Get Truckin')
     end
   end
