@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(:version => 20130316001450) do
     t.string   "userable_type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+
+  create_table "locations", :force => true do |t|
+    t.date     "location_date"
+    t.time     "arrival_time"
+    t.time     "departure_time"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "secret_code"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+
   end
 
 end
