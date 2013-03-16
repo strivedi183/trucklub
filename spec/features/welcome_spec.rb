@@ -6,5 +6,9 @@ describe 'Welcome' do
       visit root_path
       page.should have_link('Login to trucKlub')
     end
+    it 'displays register for trucKlub link' do
+      visit root_path
+      page.should have_link('Register')
+    end
   end
 end
