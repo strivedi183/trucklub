@@ -14,5 +14,7 @@
 class Truck < ActiveRecord::Base
   attr_accessible :title, :description, :twitter, :phone
   has_one :user, :as => :userable
+  has_many :meals, :inverse_of => :truck
   validates :title, :description, :twitter, :phone, :presence => true
+
 end
