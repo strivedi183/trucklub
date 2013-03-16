@@ -32,14 +32,12 @@ describe Meal do
     # end
   end
 
-  # describe '#metadata' do
-  #   it 'has meal properties' do
-  #     meal = Meal.create
-  #     # meal.meal_date = Date.current
-  #     # meal.meal_time = Time.now
-  #     expect(meal.id).to_not be nil
-  #     # expect(meal.meal_date).to eq(expected) Date.current
-  #     # expect(meal.meal_time).to eq(expected) Time.now
-  #   end
-  # end
+  describe '#metadata' do
+    it 'has meal properties' do
+      meal = Meal.create
+      expect(meal.id).to_not be nil
+      expect(meal.meal_date).to eq(expected) Date.current
+      expect(meal.meal_time).to eq(expected) Time.now
+    end
+  end
 end
