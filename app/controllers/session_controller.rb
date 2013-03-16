@@ -6,8 +6,10 @@ class SessionController < ApplicationController
     @auth = User.where(:email => params[:email]).first
     if @auth.present? && @auth.authenticate(params[:password])
       session[:user_id] = @auth.id
+      redirect_to root_path
     else
       session[:user_id] = nil
+      redirect_to login_path
     end
   end
 
