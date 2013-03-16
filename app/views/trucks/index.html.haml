@@ -1,15 +1,22 @@
 %h1 Trucks
-
-%table
-  %thead
-    %thead
-      %tr
-        %th Truck Name
-        %th Description
-        %th Twitter
-    %tbody
-    - @trucks.each do |truck|
-      %tr
-        %td= truck.title
-        %td= truck.description
-        %td= truck.twitter
+%script
+  var trucks = [];
+.row
+  .large-4.columns
+    %table
+      %thead
+        %thead
+          %tr
+            %th Truck Name
+            %th Description
+            %th Twitter
+        %tbody
+        - @locations.each do |location|
+          %script
+            ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
+          %tr
+            %td= location.truck.title
+            %td= location.truck.description
+            %td= location.truck.twitter
+  .large-8.columns
+    #map_canvas

@@ -12,5 +12,8 @@ l2 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departu
 l3 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '920 Broadway, NYC' )
 
 l1.truck = t1
+l1.save
 l2.truck = t2
+l2.save
 l3.truck = t3
+l3.save
