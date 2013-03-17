@@ -1,12 +1,12 @@
 - if @auth
   %script
-    = "var meal_count = #{@auth.userable.meal_count}"
+    = "var meal_count = #{@auth.userable.meal_count if @auth.is_eater?}"
 .row
   .large-12.columns.spacer
 .row
   .large-6.large-centered.small-10.small-centered.columns
     #card
-      - if @auth
+      - if @auth.is_eater?
         %h1.cardtext.center=  @auth.name +  "'s trucKlub card"
         %h3.center=  "I already ate " + @auth.userable.meal_count + " meals!"
 

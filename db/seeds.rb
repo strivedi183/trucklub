@@ -6,6 +6,9 @@ Eater.delete_all
 u1 = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
 u2 = User.create(name: 'joe', email: 'joe@gmail.com', password: 'a', password_confirmation: 'a')
 u3 = User.create(name: 'sue', email: 'sue@gmail.com', password: 'a', password_confirmation: 'a')
+u4 = User.create(name: 'ron', email: 'ron@gmail.com', password: 'a', password_confirmation: 'a')
+u5 = User.create(name: 'sandip', email: 'sandip@gmail.com', password: 'a', password_confirmation: 'a')
+u6 = User.create(name: 'tony', email: 'tony@gmail.com', password: 'a', password_confirmation: 'a')
 
 e1 = Eater.create(location: '10 East 21st Street, NY, NY')
 e2 = Eater.create(location: '10 East 21st Street, NY, NY')
@@ -68,3 +71,6 @@ t3.meals << m5 << m6
 e1.user = u1
 e2.user = u2
 e3.user = u3
+t1.user = u4
+t2.user = u5
+t3.user = u6

@@ -1,6 +1,6 @@
 Trucklub::Application.routes.draw do
   root :to => 'welcome#index'
-  resources :trucks, :only => [:index]
+  resources :trucks, :only => [:index, :show]
   resources :users, :only => [:new, :create]
   get '/login' => 'session#new'
   post '/login' => 'session#create'
