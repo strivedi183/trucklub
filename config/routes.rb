@@ -5,6 +5,8 @@ Trucklub::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
+
   post '/sms' => 'sms#receive'
-#  get '/sms_test' => 'welcome#sms_test'
+
+  post '/eaters/code' => 'eaters#create_code'
 end

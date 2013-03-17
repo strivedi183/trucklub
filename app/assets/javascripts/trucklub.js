@@ -1,7 +1,8 @@
 $(function() {
   display_map(40.7482845,-73.9855692, 12);
   populate_map();
-  var ralph = 'boo';
+
+  $('.show_code_button').click(show_code_form);
 });
 
 var map;
@@ -45,6 +46,30 @@ function display_map(lat, longitude, zoom)
   map = new google.maps.Map(canvas, mapOptions);
 }
 
+function show_code_form()
+{
+  $('.code_form').removeClass('hide');
+  $('.show_code_button').hide();
+  $('.create_code_button').removeClass('hide');
+  $('.create_code_button').click(send_code);
+}
 
+function send_code()
+{
+ var code = $('.code_form').val();
 
+   $.ajax({
+      dataType: 'json',
+      type: "post",
+      url: "/eaters/code/",
+      data: {authenticity_token:authenticity_token, code:code}
+    }).done(process_code);
+
+  return false;
+}
+
+function process_code()
+{
+  console.log('code added');
+}
 
