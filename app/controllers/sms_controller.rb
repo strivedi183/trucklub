@@ -3,8 +3,10 @@ class SmsController < ApplicationController
   def receive
     message_body = params["Body"]
     from_number = params["From"]
-    truck = Truck.where(:phone => from_number)
-    truck = Truck.update(:address => message_body)
-    truck.save
+    truck = Truck.where(:phone => from_number).first
+    location = truck.locations.last
+    location.address = message_body
+    location.save
+    render :nothing => true
   end
 end
