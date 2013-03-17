@@ -13,6 +13,7 @@
 
 <%= render :partial => 'layouts/nav' %>
 <%= render(:partial => 'users/card') if @auth.present? %>
+<%= render(:partial => 'users/cardmax') if @auth.present? %>
 <div class="row">
 
 

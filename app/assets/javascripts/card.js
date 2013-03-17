@@ -10,3 +10,10 @@ function add_card_class(index)
   $(index).addClass('full');
 }
 
+function is_card_full()
+{
+  if (meal_count === 10)
+  {
+    $('#myModal').foundation('reveal', 'open');
+  }
+}
