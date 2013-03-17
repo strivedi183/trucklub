@@ -1,9 +1,15 @@
 #sendcodeModal.reveal-modal.small
   .row
+<<<<<<< HEAD
     .large-12.large-centered.small-12.small-centered
       %h2 Please enter the code you received from the truck:
       = form_tag '/eaters/code', :remote => true do
         = label_tag ' '
+=======
+    .large-4.large-centered.small-10.small-centered
+      = form_tag "/eaters/#{@auth.userable.id}/code", :remote => true do
+        = label_tag 'Enter Code'
+>>>>>>> 6d8d41a8a7dd6e3933104201aa5ac52dc7de82fb
         = text_field_tag 'code', nil, :autofocus => true
         = submit_tag 'Submit code', :class => 'right button success prefix create_code_button'
   %a.close-reveal-modal
