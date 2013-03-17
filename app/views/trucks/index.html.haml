@@ -12,8 +12,10 @@
       %script
         ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
       #truck_each.truck_box
-        %h3.inline-block.bottom_up= location.truck.title
+        %h3.inline-block.bottom_up= link_to(location.truck.title, "/trucks/" + location.truck.id.to_s)
         %p.orange.bottom_up= location.truck.description
         %p= link_to("Twitter: @" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
   .clear
+.row
+  .large-12.columns.spacer
   #map_canvas.large-10.large-centered
