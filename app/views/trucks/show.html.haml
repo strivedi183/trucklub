@@ -13,4 +13,6 @@
     %h5= link_to(number_to_phone(@truck.phone), "tel:#{@truck.phone}")
     - if (@auth.present? && @auth.is_truck? && (@auth.userable.title == @truck.title))
       %p= "Today's code is: #{@auth.userable.locations.last.secret_code}"
+    %p= @truck.about
+
 //= link_to('Edit Truck', edit_truck_path(@truck))
