@@ -6,6 +6,7 @@ class AddUsersTable < ActiveRecord::Migration
       t.string :password_digest
       t.integer :userable_id
       t.string :userable_type
+      t.boolean :is_admin, :default => false
       t.timestamps
     end
   end

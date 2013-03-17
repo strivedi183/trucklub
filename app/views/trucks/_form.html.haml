@@ -1,0 +1,19 @@
+.row
+  .large-12.columns.spacer
+.row
+  .large-4.small-10.large-centered.small-centered.columns
+    / = form_for @truck, :url => trucks_path, :remote => true do |f|
+    /   = f.label :title
+    /   = f.text_field :title, :autofocus => true
+    /   = f.label :description
+    /   = f.text_field :description
+    /   = f.label :twitter
+    /   = f.text_field :twitter
+    /   = f.label :phone
+    /   = f.text_field :phone
+    /   = f.label :image_url
+    /   = f.text_field :image_url
+    /   = f.submit nil, :class => 'button small success'
+    /   = link_to 'Cancel', root_path, :class => 'button small alert'
+
+

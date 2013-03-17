@@ -12,7 +12,8 @@
 <body>
 
 <%= render :partial => 'layouts/nav' %>
-<%= render(:partial => 'users/card') %>
+<%= render(:partial => 'users/card') if (@auth.present? && @auth.is_eater?)%>
+<%= render(:partial => 'users/cardmax') if (@auth.present? && @auth.is_eater?) %>
 <div class="row">
 
 
