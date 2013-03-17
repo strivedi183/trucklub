@@ -9,3 +9,4 @@ function add_card_class(index)
 {
   $(index).addClass('full');
 }
+

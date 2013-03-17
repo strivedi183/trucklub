@@ -7,13 +7,6 @@ $(function() {
 var map;
 var markers = [];
 
-$(function()
-{
-
-fill_card();
-
-});
-
 function populate_map()
 {
   _.each(trucks, prep_markers);
