@@ -13,12 +13,26 @@ e3 = Eater.create(location: '10 East 21st Street, NY, NY')
 
 t1 = Truck.create(:title => 'Taco Bite', :description => 'Seafood', :twitter => 'FishingShrimp' , :phone => '+19146498398')
 t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitter => 'LukesLobsterNY' , :phone => '+19179222816')
-t3 = Truck.create(:title => 'Dick Wash Express', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19172512795')
+t3 = Truck.create(:title => 'Mud Truck', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19172512795')
 t4 = Truck.create(:title => 'Crusin Kitchen', :description => 'American', :twitter => 'Cruisin_Kitchen' , :phone => '+17175033849')
+t4 = Truck.create(:title => 'Taim Mobile', :description => 'Middle Eastern', :twitter => 'TaimMobile' , :phone => '+17175033849')
+t5 = Truck.create(:title => 'Sweetery NYC', :description => 'Desert', :twitter => 'sweeterynyc' , :phone => '+17175033849')
+t6 = Truck.create(:title => 'Van Leeuwen Artisan', :description => 'Desert', :twitter => 'vlaic' , :phone => '+17175033849')
+t7 = Truck.create(:title => "Big D's Grub Truck", :description => 'Asian Tacos', :twitter => 'bigdsgrub' , :phone => '+17175033849')
+t8 = Truck.create(:title => 'Go Burger', :description => 'Burgers', :twitter => 'go_burger' , :phone => '+17175033849')
+t9 = Truck.create(:title => "Shorty's NYC", :description => 'Cheesesteak', :twitter => 'shortysnyc' , :phone => '+17175033849')
+t10 = Truck.create(:title => "Shorty's NYC", :description => 'Cheesesteak', :twitter => 'shortysnyc' , :phone => '+17175033849')
+t11= Truck.create(:title => 'Munchie Mobile', :description => 'Burgers', :twitter => 'MunchieMobileNY' , :phone => '+17175033849')
+t12 = Truck.create(:title => 'Wafles & Dinges', :description => 'Waffles', :twitter => 'waffletruck' , :phone => '+17175033849')
 
 l1 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Empire State Building, NYC' )
 l2 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Union Square, NYC' )
 l3 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '920 Broadway, NYC' )
+l4 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '920 Broadway, NYC' )
+l5 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '220 East 23rd Street, NYC' )
+l6 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '555 Fifth Avenue, NYC' )
+l7 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '8th Avenue & 31st Street , NYC' )
+l8 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '455 E 114th St, NYC' )
 
 m1 = Meal.create(meal_date: '2013-03-16', meal_time: '13:00')
 m2 = Meal.create(meal_date: '2013-02-14', meal_time: '12:30')
@@ -41,6 +55,11 @@ l3.save
 t1.locations << l1
 t2.locations << l2
 t3.locations << l3
+t4.locations << l4
+t5.locations << l5
+t6.locations << l6
+t7.locations << l7
+t8.locations << l8
 
 t1.meals << m1 << m2
 t2.meals << m3 << m4
