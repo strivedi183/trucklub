@@ -45,14 +45,6 @@ function display_map(lat, longitude, zoom)
   map = new google.maps.Map(canvas, mapOptions);
 }
 
-function fill_card()
-{
-  var x = $('#boxes').children();
-  var y = _.first(x, meal_count);
-  _.each(y, add_card_class);
-}
 
-function add_card_class(index)
-{
-  $(index).addClass('full');
-}
+
+

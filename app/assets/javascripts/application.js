@@ -6,4 +6,6 @@
 //= require 'morris/morris.min.js'
 //= require 'underscore-min.js'
 //= require 'accounting.min.js'
+//= require 'backstretch.js'
+//= require 'card.js'
 //= require 'trucklub.js'
