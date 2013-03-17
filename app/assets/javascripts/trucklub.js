@@ -43,9 +43,10 @@ function display_map(lat, longitude, zoom)
 
 function show_code_form()
 {
-  $('.code_form').removeClass('hide');
+  // $('.code_form').removeClass('hide');
   $('.show_code_button').hide();
-  $('.create_code_button').removeClass('hide');
+  // $('.create_code_button').removeClass('hide');
+  $('#sendcodeModal').foundation('reveal', 'open');
 }
 
 

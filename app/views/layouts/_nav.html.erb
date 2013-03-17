@@ -20,13 +20,9 @@
         <li class="divider"></li>
         <% if (@auth.present? && @auth.is_eater?) %>
         <li><%= link_to_function "My Loyalty Card", 'show_card();', :class => "button radius" %></li>
-
         <li class="divider"></li>
         <li><a href="#" class="button prefix show_code_button">Enter Code</a></li>
-        <%= form_tag '/eaters/code', :remote => true do %>
-        <li><%= text_field_tag 'code', nil, :class => 'hide code_form' %></li>
-        <li><%= submit_tag 'Submit code', :class => 'right hide button success prefix create_code_button' %>  </li>
-        <% end %>
+
         <li><p class="error_code hide">Invalid code entered. Try again.</p></li>
         <% end %>
       </ul>

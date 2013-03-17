@@ -29,7 +29,7 @@ t7 = Truck.create(:title => "Big Ds Grub Truck", :description => 'Asian Tacos', 
 t8 = Truck.create(:title => 'Go Burger', :description => 'Burgers', :twitter => 'go_burger' , :phone => '+17175033849' , :image_url => 'http://newyorkstreetfood.com/wp-content/uploads/2012/02/truck2.jpg')
 t9 = Truck.create(:title => "Shortys NYC", :description => 'Cheesesteak', :twitter => 'shortysnyc' , :phone => '+17175033849' , :image_url => 'http://newyorkstreetfood.com/wp-content/uploads/2012/05/truck-window2.jpg')
 t10 = Truck.create(:title => "Mexicue", :description => 'Mexican', :twitter => 'Mexicue' , :phone => '+19146498398' , :image_url => 'http://newyorkstreetfood.com/wp-content/uploads/2010/08/truck.JPG')
-t11= Truck.create(:title => 'Munchie Mobile', :description => 'Burgers', :twitter => 'MunchieMobileNY' , :phone => '+17175033849' , :image_url => 'https://si0.twimg.com/profile_images/3204720926/8a8410777aaf4392b78c968171aed1a7.jpeg')
+t11 = Truck.create(:title => 'Munchie Mobile', :description => 'Burgers', :twitter => 'MunchieMobileNY' , :phone => '+17175033849' , :image_url => 'https://si0.twimg.com/profile_images/3204720926/8a8410777aaf4392b78c968171aed1a7.jpeg')
 t12 = Truck.create(:title => 'Wafles & Dinges', :description => 'Waffles', :twitter => 'waffletruck' , :phone => '+17175033849' , :image_url => 'http://tastytouring.com/wp-content/uploads/2010/09/wafel-dinges-trailer1.JPG')
 
 l1 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Empire State Building, NYC' )
@@ -47,6 +47,15 @@ m3 = Meal.create(meal_date: '2013-01-17', meal_time: '13:00')
 m4 = Meal.create(meal_date: '2013-02-12', meal_time: '12:45')
 m5 = Meal.create(meal_date: '2012-11-30', meal_time: '11:45')
 m6 = Meal.create(meal_date: '2011-12-31', meal_time: '23:00')
+m7 = Meal.create(meal_date: '2013-01-01', meal_time: '12:45')
+m8 = Meal.create(meal_date: '2012-01-02', meal_time: '11:45')
+m9 = Meal.create(meal_date: '2011-01-03', meal_time: '23:00')
+m10 = Meal.create(meal_date: '2013-01-04', meal_time: '12:45')
+m11 = Meal.create(meal_date: '2012-01-05', meal_time: '11:45')
+m12 = Meal.create(meal_date: '2011-01-06', meal_time: '23:00')
+m13 = Meal.create(meal_date: '2013-01-07', meal_time: '12:45')
+m14 = Meal.create(meal_date: '2012-01-08', meal_time: '11:45')
+m15 = Meal.create(meal_date: '2011-01-09', meal_time: '23:00')
 
 e1.meals << m1 << m2 << m4 << m6
 e2.meals << m3

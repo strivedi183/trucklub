@@ -1,0 +1,8 @@
+#sendcodeModal.reveal-modal
+  .row
+    .large-4.large-centered.small-10.small-centered
+      = form_tag '/eaters/code', :remote => true do
+        = label_tag 'Enter Code'
+        = text_field_tag 'code', nil, :autofocus => true
+        = submit_tag 'Submit code', :class => 'right button success prefix create_code_button'
+  %a.close-reveal-modal
