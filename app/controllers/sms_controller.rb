@@ -4,7 +4,7 @@ class SmsController < ApplicationController
     message_body = params["body"]
     from_number = params["from"]
     t1 = Truck.where(:phone => from_number).first
-    l1 = t1.location.last
+    l1 = t1.locations.last
     l1.address = message_body.to_s
     l1.save
     render :nothing => true
