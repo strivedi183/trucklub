@@ -64,3 +64,7 @@ function add_to_mealcount()
 {
   meal_count += 1;
 }
+
+// ********************
+var key_value = "myTestCookie=true";
+var foundCookie = 0;
