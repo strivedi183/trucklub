@@ -13,7 +13,7 @@
 #
 
 class Truck < ActiveRecord::Base
-  attr_accessible :title, :description, :twitter, :phone, :image_url
+  attr_accessible :title, :description, :twitter, :phone, :image_url, :about
   has_one :user, :as => :userable
   has_many :locations, :inverse_of => :truck
   has_many :meals, :inverse_of => :truck
