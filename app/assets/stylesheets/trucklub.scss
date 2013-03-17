@@ -35,18 +35,19 @@ li {
 
 a:link, a:visited {
 
-  color: #4771A8;
+  color: #333;
 }
 
 
 .truck_box{
-  border: 1px solid #777;
+  // border: 1px solid #777;
   width: 190px;
   height: 180px;
-  padding: 4px;
-  margin: 4px;
+  padding: 8px;
+  margin: 8px;
   float: left;
   background: #EEE;
+  box-shadow: 1px 1px 10px #999;
 
 }
 .inline-block{
