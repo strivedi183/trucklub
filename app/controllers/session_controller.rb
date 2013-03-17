@@ -9,7 +9,8 @@ class SessionController < ApplicationController
       if @auth.is_eater?.present?
         redirect_to trucks_path
       else @auth.is_truck?.present?
-        redirect_to root_path
+        truck = Truck.find(@auth.userable.id)
+        redirect_to(truck)
       end
     else
       session[:user_id] = nil

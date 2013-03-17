@@ -1,8 +1,8 @@
 %ul
-  / %li= @truck.title
-  / //%li= image_tag(@truck.image_url)
-  / %li= @truck.description
-  / %li= link_to(@truck.twitter, "http://twitter.com/" + @truck.twitter)
-  / %li= @truck.phone
+  %li= @auth.userable.title
+  //%li= image_tag(@truck.image_url)
+  %li= @auth.userable.description
+  %li= link_to(@auth.userable.twitter, "http://twitter.com/" + @auth.userable.twitter)
+  %li= @auth.userable.phone
 
 //= link_to('Edit Truck', edit_truck_path(@truck))

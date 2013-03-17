@@ -17,9 +17,9 @@ li {
 
 #map_canvas
 {
-  width: 450px;
   height: 600px;
-  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-bottom: 50px;
   border: 2px solid black;
 }
 
@@ -29,7 +29,7 @@ li {
   height: 300px;
   box-shadow: 2px 2px 5px #777;
   padding: 16px;
-  background: url('card_bg.jpg');
+  background-color: #F5F4B8;
 }
 
 .full{
@@ -62,4 +62,6 @@ li {
   box-shadow: 2px 2px 5px #444;
   background-color: rgba(255, 255, 255, 0.9);
 }
-
+.flexible_gmap{
+  width: 100%;
+}
