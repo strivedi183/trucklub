@@ -7,7 +7,7 @@
   .large-6.large-centered.small-10.small-centered.columns
     #card
       - if (@auth.present? && @auth.is_eater?)
-        %h1.cardtext.center=  @auth.name +  "'s trucKlub card"
+        %h1.cardtext.center=  @auth.name +  "'s LunchyPunchy"
         %h3.center=  "I already ate " + @auth.userable.meal_count + " meals!"
 
       <br>
