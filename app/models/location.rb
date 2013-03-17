@@ -40,7 +40,7 @@ class Location < ActiveRecord::Base
 
   def generate_secret
     # no words < 3 or > than 7 ot words with underscores
-    RandomWord.exclude_list << /_/ << /^.{0,3}$/ << /^.{8,100}$/
+    RandomWord.exclude_list << /_/ << /^.{0,3}$/ << /^.{8,100}$/ << /poison/
     if self.secret_code.blank?
       self.secret_code = RandomWord.nouns.first
     end

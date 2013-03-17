@@ -1,0 +1,1 @@
+var meal_count += 1;
