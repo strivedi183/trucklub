@@ -45,22 +45,8 @@ function show_code_form()
   $('.code_form').removeClass('hide');
   $('.show_code_button').hide();
   $('.create_code_button').removeClass('hide');
-  $('.create_code_button').click(send_code);
 }
 
-function send_code()
-{
-
- var code = $('.code_form').val();
-   $.ajax({
-      dataType: 'json',
-      type: "post",
-      url: "/eaters/code/",
-      data: {authenticity_token:authenticity_token, code:code}
-    }).done(process_code);
-
-  return false;
-}
 
 function map_resize(){
   console.log('map should resize');
@@ -73,7 +59,7 @@ function map_resize(){
 }
 
 
-function process_code()
+function add_to_mealcount()
 {
-  console.log('code added');
+  meal_count += 1;
 }
