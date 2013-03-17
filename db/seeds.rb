@@ -9,6 +9,10 @@ u3 = User.create(name: 'sue', email: 'sue@gmail.com', password: 'a', password_co
 u4 = User.create(name: 'ron', email: 'ron@gmail.com', password: 'a', password_confirmation: 'a')
 u5 = User.create(name: 'sandip', email: 'sandip@gmail.com', password: 'a', password_confirmation: 'a')
 u6 = User.create(name: 'tony', email: 'tony@gmail.com', password: 'a', password_confirmation: 'a')
+u7 = User.create(name: 'admin', email: 'admin@gmail.com', password: 'a', password_confirmation: 'a')
+
+u7.is_admin = true
+u7.save
 
 e1 = Eater.create(location: '10 East 21st Street, NY, NY')
 e2 = Eater.create(location: '10 East 21st Street, NY, NY')
