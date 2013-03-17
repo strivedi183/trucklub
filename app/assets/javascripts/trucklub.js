@@ -2,6 +2,9 @@ $(function() {
   display_map(40.7482845,-73.9855692, 12);
   populate_map();
   var ralph = 'boo';
+  $(window).resize(map_resize);
+  map_resize();
+
 });
 
 var map;
@@ -45,6 +48,15 @@ function display_map(lat, longitude, zoom)
   map = new google.maps.Map(canvas, mapOptions);
 }
 
+function map_resize(){
+  console.log('map should resize');
+  $('#map_canvas').css('width','70%');
+  var y = $(window).height();
+  y = y/2;
+  $('#map_canvas').css('height', y);
+  var x = $('#map_canvas').css('width');
+  console.log(y);
+}
 
 
 
