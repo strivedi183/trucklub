@@ -15,5 +15,10 @@ Trucklub::Application.routes.draw do
 
   post '/sms' => 'sms#receive'
 
-  post '/eaters/code' => 'eaters#create_code'
+  # resources :eaters, :only => [:new, :create] do
+  #   member do
+  #     post :code
+  #   end
+  # end
+  post '/eaters/:id/code' => 'eaters#create_code'
 end
