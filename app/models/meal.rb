@@ -14,6 +14,7 @@
 class Meal < ActiveRecord::Base
   attr_accessible :meal_date, :meal_time, :eater_id, :truck_id
   belongs_to :truck, :inverse_of => :meals
+  has_one :eater
   # validates :meal_date, :meal_time, :presence => true
 
   before_save :meal_timestamp

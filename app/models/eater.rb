@@ -11,5 +11,12 @@
 class Eater < ActiveRecord::Base
   attr_accessible :location
   has_one :user, :as => :userable
+  has_many :meals
   validates :location, :presence => true
+
+
+  def meal_count
+    self.meals.count.to_s
+  end
+
 end
