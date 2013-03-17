@@ -36,9 +36,10 @@
         <li class="divider"></li>
         <%== login_nav %>
         <li class="divider"></li>
-        <li><%= link_to('Register', new_user_path) %></li>
+        <% if !@auth %>
+        <li><%= link_to('Register', new_user_path, :class => 'button') %></li>
         <li class="divider"></li>
-
+        <% end %>
       </ul>
     </section>
   </nav>

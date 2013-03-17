@@ -2,7 +2,6 @@ $(function() {
   display_map(40.7482845,-73.9855692, 12);
   populate_map();
   map_resize();
-
   $('.show_code_button').click(show_code_form);
   $(window).resize(map_resize);
 });

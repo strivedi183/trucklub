@@ -23,7 +23,7 @@ t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitte
 t3 = Truck.create(:title => 'Mud Truck', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19172512795' , :image_url => 'http://www.urban75.org/photos/newyork/images/ny561.jpg')
 t4 = Truck.create(:title => 'Crusin Kitchen', :description => 'American', :twitter => 'Cruisin_Kitchen' , :phone => '+17175033849' , :image_url => 'https://pbs.twimg.com/media/A1D2_XWCQAAcsxm.jpg')
 t4 = Truck.create(:title => 'Taim Mobile', :description => 'Middle Eastern', :twitter => 'TaimMobile' , :phone => '+17175033849' , :image_url => 'https://pbs.twimg.com/media/BDKytIZCAAAGNlB.jpg')
-t5 = Truck.create(:title => 'Sweetery NYC', :description => 'Desert', :twitter => 'sweeterynyc' , :phone => '+17175033849' , :image_url => 'http://dguides.com/newyorkcity/files/2011/11/Sweetery-NYC1.jpg')
+t5 = Truck.create(:title => 'Sweetery NYC', :description => 'Desert', :twitter => 'sweeterynyc' , :phone => '+17175033849' , :image_url => 'http://2.bp.blogspot.com/-QWmlyGo_ckE/UMIHFkzbbtI/AAAAAAAABGQ/OITIuNtE2aU/s1600/Screen+Shot+2012-12-07+at+9.09.07+AM.png')
 t6 = Truck.create(:title => 'Van Leeuwen Artisan', :description => 'Desert', :twitter => 'vlaic' , :phone => '+17175033849' , :image_url => 'http://newyorkstreetfood.com/wp-content/uploads/2012/08/truck-high-line.jpg')
 t7 = Truck.create(:title => "Big Ds Grub Truck", :description => 'Asian Tacos', :twitter => 'bigdsgrub' , :phone => '+19146498398' , :image_url => 'http://farm6.static.flickr.com/5136/5493461896_e0d9160b5f.jpg')
 t8 = Truck.create(:title => 'Go Burger', :description => 'Burgers', :twitter => 'go_burger' , :phone => '+17175033849' , :image_url => 'http://newyorkstreetfood.com/wp-content/uploads/2012/02/truck2.jpg')
