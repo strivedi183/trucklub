@@ -1,9 +1,8 @@
 class SmsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def receive
-    #this is case sensitive. "Body" on Heroku/Twilio
-    message_body = params["body"]
-    from_number = params["from"]
+    message_body = params["Body"]
+    from_number = params["From"]
     truck = Truck.where(:phone => from_number).first
     location = truck.locations.last
     location.address = message_body

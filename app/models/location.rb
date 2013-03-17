@@ -28,6 +28,15 @@ class Location < ActiveRecord::Base
     client.account.sms.messages.create(:from => '+19177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is #{self.secret_code}")
   end
 
+  def sms(truck_id)
+    current_date = Date.current
+    t1 = Truck.find(truck_id)
+    client = Twilio::REST::Client.new(ENV['TW_SID'], ENV['TW_TOK'])
+    client.account.sms.messages.create(:from => '+19177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is #{self.secret_code}")
+    self.truck = t1
+  end
+
+
   private
   def geocode
     result = Geocoder.search(self.address).first
