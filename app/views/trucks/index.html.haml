@@ -1,4 +1,6 @@
 .row
+  .large-12.columns.spacer
+.row
   .large-10.small-10.small-centered.columns
     %h1 Trucks
 %script
@@ -13,4 +15,5 @@
         %h3.inline-block.bottom_up= location.truck.title
         %p.orange.bottom_up= location.truck.description
         %p= link_to("Twitter: @" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
+  .clear
   #map_canvas.large-10.large-centered

@@ -1,6 +1,5 @@
 * {
   letter-spacing: -.05em;
-
 }
 
 h3, p, h1, h2, h4, h5 {
@@ -19,6 +18,9 @@ li {
   list-style-type: none;
 }
 
+.clear{
+  clear:both;
+}
 // .bottom_up{
 //   margin-bottom: -5px;
 // }
