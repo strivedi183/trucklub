@@ -27,9 +27,9 @@ m4 = Meal.create(meal_date: '2013-02-12', meal_time: '12:45')
 m5 = Meal.create(meal_date: '2012-11-30', meal_time: '11:45')
 m6 = Meal.create(meal_date: '2011-12-31', meal_time: '23:00')
 
-e1.meals << m1 << m2
-e2.meals << m3 << m4
-e3.meals << m5 << m6
+e1.meals << m1 << m2 << m4 << m6
+e2.meals << m3
+e3.meals << m5
 
 l1.truck = t1
 l1.save
