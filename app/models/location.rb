@@ -25,7 +25,7 @@ class Location < ActiveRecord::Base
   def send_code_text
     current_date = Date.current
     client = Twilio::REST::Client.new(ENV['TW_SID'], ENV['TW_TOK'])
-    client.account.sms.messages.create(:from => '+9177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is #{self.secret_code}")
+    client.account.sms.messages.create(:from => '+19177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is #{self.secret_code}")
   end
 
   private

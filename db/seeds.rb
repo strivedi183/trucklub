@@ -11,10 +11,10 @@ e1 = Eater.create(location: '10 East 21st Street, NY, NY')
 e2 = Eater.create(location: '10 East 21st Street, NY, NY')
 e3 = Eater.create(location: '10 East 21st Street, NY, NY')
 
-t1 = Truck.create(:title => 'Fishing Shrimp', :description => 'Seafood', :twitter => 'FishingShrimp' , :phone => '+19179222816')
+t1 = Truck.create(:title => 'Taco Bite', :description => 'Seafood', :twitter => 'FishingShrimp' , :phone => '+19146498398')
 t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitter => 'LukesLobsterNY' , :phone => '+19179222816')
-t3 = Truck.create(:title => 'Mud Truck', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19179222816')
-t4 = Truck.create(:title => 'Crusin Kitchen', :description => 'American', :twitter => 'Cruisin_Kitchen' , :phone => '+19179222816')
+t3 = Truck.create(:title => 'Dick Wash Express', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19172512795')
+t4 = Truck.create(:title => 'Crusin Kitchen', :description => 'American', :twitter => 'Cruisin_Kitchen' , :phone => '+17175033849')
 
 l1 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Empire State Building, NYC' )
 l2 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Union Square, NYC' )
