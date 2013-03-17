@@ -6,9 +6,9 @@ class SessionController < ApplicationController
     @auth = User.where(:email => params[:email]).first
     if @auth.present? && @auth.authenticate(params[:password])
       session[:user_id] = @auth.id
-      if @auth.userable == eater
+      if @auth.is_eater?.present?
         redirect_to trucks_path
-      else @auth.userable == truck
+      else @auth.is_truck?.present?
         redirect_to root_path
       end
     else

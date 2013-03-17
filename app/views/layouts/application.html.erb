@@ -12,7 +12,7 @@
 <body>
 
 <%= render :partial => 'layouts/nav' %>
-<%= render(:partial => 'users/card') %>
+<%= render(:partial => 'users/card') if @auth.present? %>
 <div class="row">
 
 
