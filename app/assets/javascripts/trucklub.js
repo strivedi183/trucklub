@@ -1,19 +1,14 @@
 $(function() {
   display_map(40.7482845,-73.9855692, 12);
   populate_map();
+  map_resize();
 
   $('.show_code_button').click(show_code_form);
+  $(window).resize(map_resize);
 });
 
 var map;
 var markers = [];
-
-$(function()
-{
-
-fill_card();
-
-});
 
 function populate_map()
 {
@@ -56,8 +51,8 @@ function show_code_form()
 
 function send_code()
 {
- var code = $('.code_form').val();
 
+ var code = $('.code_form').val();
    $.ajax({
       dataType: 'json',
       type: "post",
@@ -68,8 +63,18 @@ function send_code()
   return false;
 }
 
+function map_resize(){
+  console.log('map should resize');
+  $('#map_canvas').css('width','70%');
+  var y = $(window).height();
+  y = y/2;
+  $('#map_canvas').css('height', y);
+  var x = $('#map_canvas').css('width');
+  console.log(y);
+}
+
+
 function process_code()
 {
   console.log('code added');
 }
-

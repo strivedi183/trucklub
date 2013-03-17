@@ -18,7 +18,7 @@
         <li class="divider"></li>
         <li><%= link_to('See our trucks', trucks_path) %></li>
         <li class="divider"></li>
-        <% if @auth %>
+        <% if (@auth.present? && @auth.is_eater?) %>
         <li><%= link_to_function "My Loyalty Card", 'show_card();', :class => "button radius" %></li>
 
         <li class="divider"></li>

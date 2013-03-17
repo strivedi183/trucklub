@@ -1,0 +1,8 @@
+- if (@auth.present? && @auth.is_admin == true)
+  %h1 Administrator Dashboard:
+  / .large-10.large-centered.small-10.small-centered
+  - @trucks.each do |truck|
+    #truck_each.truck_box
+      %h3.inline.block.bottom_up= truck.title
+      %p.orange.bottom_up= truck.phone
+      %p.round.secondary.label= link_to('Send Code', send_code_user_path(truck.id))

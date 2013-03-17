@@ -1,7 +1,11 @@
 * {
   letter-spacing: -.05em;
+
 }
 
+h3, p, h1, h2, h4, h5 {
+  line-height: 1em;
+}
 .spacer{
   height: 60px;
 }
@@ -15,21 +19,40 @@ li {
   list-style-type: none;
 }
 
+// .bottom_up{
+//   margin-bottom: -5px;
+// }
+
 #map_canvas
 {
-  width: 450px;
-  height: 600px;
-  margin-bottom: 40px;
+  height: 500px;
+  margin-left: 15%;
+  margin-bottom: 50px;
   border: 2px solid black;
 }
 
+.truck_box{
+  border: 1px solid #777;
+  width: 190px;
+  height: 180px;
+  padding: 4px;
+  margin: 4px;
+  float: left;
+  background: #EEE;
 
+}
+.inline-block{
+  display: inline-block;
+}
+.orange{
+  color: #F05011;
+}
 #card {
   width: 480px;
   height: 300px;
   box-shadow: 2px 2px 5px #777;
   padding: 16px;
-  background: url('card_bg.jpg');
+  background-color: #F5F4B8;
 }
 
 .full{
@@ -63,7 +86,10 @@ li {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-
 .error_code{
   color: red;
+}
+
+.flexible_gmap{
+  width: 100%;
 }

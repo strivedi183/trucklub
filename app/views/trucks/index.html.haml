@@ -1,25 +1,16 @@
 .row
-  .large-4.small-10.small-centered.columns
+  .large-10.small-10.small-centered.columns
     %h1 Trucks
 %script
   var trucks = [];
 
 .row
-  .large-4.small-10.small-centered.columns
-    %table
-      %thead
-        %thead
-          %tr
-            %th Truck Name
-            %th Description
-            %th Twitter
-        %tbody
-        - @locations.each do |location|
-          %script
-            ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
-          %tr
-            %td= location.truck.title
-            %td= location.truck.description
-            %td= link_to(location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
-  .large-8.small-11.small-centered.columns
-    #map_canvas
+  .large-10.large-centered.small-8.small-centered.columns
+    - @locations.each do |location|
+      %script
+        ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
+      #truck_each.truck_box
+        %h3.inline-block.bottom_up= location.truck.title
+        %p.orange.bottom_up= location.truck.description
+        %p= link_to("Twitter: @" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
+  #map_canvas.large-10.large-centered
