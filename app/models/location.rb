@@ -25,7 +25,7 @@ class Location < ActiveRecord::Base
   def send_code_text
     current_date = Date.current
     client = Twilio::REST::Client.new(ENV['TW_SID'], ENV['TW_TOK'])
-    client.account.sms.messages.create(:from => '+19177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is #{self.secret_code}. Reply with your address to be added to our map.")
+    client.account.sms.messages.create(:from => '+19177253039', :to => self.truck.phone, :body => "Your trucKlub code for #{current_date} is '#{self.secret_code}'. Reply with your address to be added to our map.")
   end
 
   private
@@ -40,7 +40,9 @@ class Location < ActiveRecord::Base
 
   def generate_secret
     RandomWord.exclude_list << /_/ << /^.{7,100}$/ #don't show words with underscores or greater than 7 chars
-    self.secret_code = RandomWord.nouns.first
+    if self.secret_code.blank?
+      self.secret_code = RandomWord.nouns.first
+    end
   end
 
 
