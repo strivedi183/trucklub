@@ -20,6 +20,17 @@ l1 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departu
 l2 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: 'Union Square, NYC' )
 l3 = Location.create(location_date: '2013-03-16', arrival_time: '10:00', departure_time: '14:00', address: '920 Broadway, NYC' )
 
+m1 = Meal.create(meal_date: '2013-03-16', meal_time: '13:00')
+m2 = Meal.create(meal_date: '2013-02-14', meal_time: '12:30')
+m3 = Meal.create(meal_date: '2013-01-17', meal_time: '13:00')
+m4 = Meal.create(meal_date: '2013-02-12', meal_time: '12:45')
+m5 = Meal.create(meal_date: '2012-11-30', meal_time: '11:45')
+m6 = Meal.create(meal_date: '2011-12-31', meal_time: '23:00')
+
+e1.meals << m1 << m2
+e2.meals << m3 << m4
+e3.meals << m5 << m6
+
 l1.truck = t1
 l1.save
 l2.truck = t2
@@ -30,6 +41,10 @@ l3.save
 t1.locations << l1
 t2.locations << l2
 t3.locations << l3
+
+t1.meals << m1 << m2
+t2.meals << m3 << m4
+t3.meals << m5 << m6
 
 e1.user = u1
 e2.user = u2

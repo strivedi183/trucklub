@@ -1,17 +1,22 @@
+- if @auth
+  %script
+    = "var meal_count = #{@auth.userable.meal_count}"
 .row
   .large-12.columns.spacer
 .row
   .large-6.large-centered.small-10.small-centered.columns
     #card
       %h1.cardtext.center my trucKlub card
-      %h3.center I already ate 3 meals.
+      - if @auth
+        %h3.center=  "I already ate " + @auth.userable.meal_count + " meals!"
+
       <br>
       #boxes
-        .box.full
+        .box
           1
-        .box.full
+        .box
           2
-        .box.full
+        .box
           3
         .box
           4
@@ -25,3 +30,5 @@
           8
         .box
           9
+%script
+  fill_card();

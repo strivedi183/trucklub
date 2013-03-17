@@ -25,4 +25,5 @@ class User < ActiveRecord::Base
   def is_eater?
     self.userable if self.userable.is_a?(Eater)
   end
+
 end
