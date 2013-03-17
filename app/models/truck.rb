@@ -16,5 +16,5 @@ class Truck < ActiveRecord::Base
   has_one :user, :as => :userable
   has_many :locations, :inverse_of => :truck
   has_many :meals, :inverse_of => :truck
-  validates :title, :description, :twitter, :phone, :presence => true
+  # validates :title, :description, :twitter, :phone, :presence => true
 end
