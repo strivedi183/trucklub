@@ -2,7 +2,7 @@
   .row
     .large-12.large-centered.small-12.small-centered
       %h2 Please enter the code you received from the truck:
-      = form_tag '/eaters/code', :remote => true do
+      = form_tag "/eaters/#{@auth.userable.id}/code", :remote => true do
         = label_tag ' '
         = text_field_tag 'code', nil, :autofocus => true
         = submit_tag 'Submit code', :class => 'right button success prefix create_code_button'
