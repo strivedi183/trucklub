@@ -70,4 +70,17 @@ describe User do
       expect(user.is_eater?).to be nil
     end
   end
+
+  describe '#is_admin' do
+    it 'returns true when is user is assigned an is_admin value' do
+      user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
+      user.is_admin = true
+      user.save
+      expect(user.is_admin).to be true
+    end
+    it 'returns false when user is created but not assigned is_admin' do
+      user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
+      expect(user.is_admin).to be false
+    end
+  end
 end
