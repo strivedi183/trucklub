@@ -1,10 +1,9 @@
 class SmsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def receive
-    message_body = params["body"]
-    #from_number = params["from"]
-    #t1 = Truck.where(:phone => from_number).first
-    t1 = Truck.find(15)
+    message_body = params["Body"]
+    from_number = params["From"]
+    t1 = Truck.where(:phone => from_number).first
     l1 = t1.locations.last
     l1.address = message_body
     l1.save
