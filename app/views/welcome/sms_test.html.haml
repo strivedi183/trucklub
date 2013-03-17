@@ -1,0 +1,11 @@
+.row
+  .large-3.columns
+    %h1 Test sms
+
+    = form_tag("/sms", :method => "post") do
+      = label_tag :from
+      = text_field_tag :from
+      = label_tag :body
+      = text_field_tag :body
+      = submit_tag "Enter"
+  .large-9.columns

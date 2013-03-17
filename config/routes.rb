@@ -6,4 +6,5 @@ Trucklub::Application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
   post '/sms' => 'sms#receive'
+  get '/sms_test' => 'welcome#sms_test'
 end
