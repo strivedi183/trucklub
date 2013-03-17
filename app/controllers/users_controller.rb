@@ -18,6 +18,18 @@ class UsersController < ApplicationController
     redirect_to trucks_path
   end
 
+  def admin
+    @trucks = Truck.all
+  end
+
+  def send_code
+    truck = Truck.find(params[:id])
+    location = Location.create
+    truck.locations << location
+    location.send_code_text
+    redirect_to admin_users_path
+  end
+
   def edit
   end
 

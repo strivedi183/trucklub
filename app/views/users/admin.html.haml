@@ -1,0 +1,6 @@
+- if (@auth.present? && @auth.is_admin == true)
+  %h1 IS ADMIN!
+  - @trucks.each do |truck|
+    %li= truck.title
+    %li= truck.phone
+    %li= link_to('Send Code', send_code_user_path(truck.id))
