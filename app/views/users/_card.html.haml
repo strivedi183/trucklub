@@ -8,7 +8,6 @@
     #card
       - if (@auth.present? && @auth.is_eater?)
         %h1.cardtext.center=  @auth.name +  "'s LunchyPunchy"
-        %h3.center=  "I already ate " + @auth.userable.meal_count + " meals!"
 
       <br>
       #boxes
