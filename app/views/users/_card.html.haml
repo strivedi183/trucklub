@@ -1,33 +1,32 @@
 - if @auth
   %script
     = "var meal_count = #{@auth.userable.meal_count if (@auth.present? && @auth.is_eater?)}"
-.row
-  .large-12.columns.spacer
-.row
-  .large-6.large-centered.small-10.small-centered.columns
-    #card
-      - if (@auth.present? && @auth.is_eater?)
-        %h1.cardtext.center=  @auth.name +  "'s LunchyPunchy"
 
-      <br>
-      #boxes
-        .box
-          1
-        .box
-          2
-        .box
-          3
-        .box
-          4
-        .box
-          5
-        .box
-          6
-        .box
-          7
-        .box
-          8
-        .box
-          9
+.row
+  #card.large-6.large-centered.small-8.small-centered.columns
+    <br>
+    - if (@auth.present? && @auth.is_eater?)
+      %h2.cardtext.center=  @auth.name +  "'s LunchyPunchy"
+
+    <br>
+    #boxes.large-12.large-centered.small-10.small-centered.columns
+      .box
+        1
+      .box
+        2
+      .box
+        3
+      .box
+        4
+      .box
+        5
+      .box
+        6
+      .box
+        7
+      .box
+        8
+      .box
+        9
 %script
   fill_card();

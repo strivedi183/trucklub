@@ -1,11 +1,11 @@
 .row
   .large-12.columns.spacer
 .row
-  .large-4.small-10.large-centered.small-centered.columns
+  .large-4.small-10.large-centered.small-centered.columns.content_box
     = form_tag '/login' do
       = label_tag :email
       = text_field_tag :email, nil, :autofocus => true
       = label_tag :password
       = password_field_tag :password
-      = submit_tag 'Get Truckin', :class => 'button small success'
-      = link_to 'Cancel', root_path, :class => 'button small alert'
+      = submit_tag 'Get Truckin', :class => 'button small success radius'
+      = link_to 'Cancel', root_path, :class => 'button small alert radius'

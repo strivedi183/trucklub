@@ -1,20 +1,24 @@
 .row
-  .large-10.small-10.small-centered.columns
-    %h1 Our hand-picked selection of <br>premium food trucks:
-%script
-  var trucks = [];
+  .large-12.columns.small-12.spacer
+.row
+  .content_box.large-10.large-centered.small-10.small-centered.columns
+    .row
+      .large-10.small-10.small-centered.columns
+        %h1 Our hand-picked selection of <br>premium food trucks:
+    %script
+      var trucks = [];
 
-.row
-  .large-10.large-centered.small-8.small-centered.columns
-    - @locations.each do |location|
-      %script
-        ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
-      #truck_each.truck_box
-        %h3.inline-block.bottom_up= link_to(location.truck.title, "/trucks/" + location.truck.id.to_s)
-        %p.orange.bottom_up= location.truck.description
-        %p= link_to("Twitter: @" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
-        %p.tiny_address= location.address
-  .clear
-.row
-  .large-12.columns.spacer
-  #map_canvas.large-10.large-centered
+    .row
+      .large-10.large-centered.small-8.small-centered.columns
+        - @locations.each do |location|
+          %script
+            ="trucks.push({title:'#{location.truck.title}',latitude:#{location.latitude}, longitude:#{location.longitude}});"
+          #truck_each.truck_box
+            %h3.inline-block.bottom_up= link_to(location.truck.title, "/trucks/" + location.truck.id.to_s)
+            %p.orange.bottom_up.bold= location.truck.description
+            %p.bold= link_to("@" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
+            %p.tiny_address= "Currently at: " + location.address
+      .clear
+    .row
+      .large-12.columns.spacer
+    #map_canvas.large-6.large-centered
