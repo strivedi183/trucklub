@@ -12,6 +12,7 @@
 <body>
 
 <%= render :partial => 'layouts/nav' %>
+<p class="error_code hide">Invalid code entered. Try again.</p>
 <%= render(:partial => 'users/card') if (@auth.present? && @auth.is_eater?)%>
 <%= render(:partial => 'users/cardmax') if (@auth.present? && @auth.is_eater?) %>
 <%= render(:partial => 'users/sendcode') if (@auth.present? && @auth.is_eater?) %>

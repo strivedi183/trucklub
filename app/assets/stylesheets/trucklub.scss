@@ -100,10 +100,24 @@ a:link, a:visited {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.pull_up{
+  margin-bottom: -20px;
+}
+
+.pull_down{
+  margin-top: -30px;
+}
+.white{
+  color: white;
+}
 .error_code{
   color: red;
 }
 
 .flexible_gmap{
   width: 100%;
+}
+
+.transparent{
+  background-color: rgba(1,1,1,0.0);
 }

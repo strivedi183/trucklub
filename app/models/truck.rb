@@ -4,12 +4,13 @@
 #
 #  id          :integer          not null, primary key
 #  title       :string(255)
+#  about       :text
 #  description :text
 #  twitter     :string(255)
 #  phone       :string(255)
+#  image_url   :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  image_url   :string(255)
 #
 
 class Truck < ActiveRecord::Base

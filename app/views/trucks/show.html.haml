@@ -1,17 +1,24 @@
-.row
-  .large-12.columns.spacer
-.row
-  .large-6.large-centered.small-10.small-centered.columns
-    %h1= @truck.title
-.row
-  .large-6.large-centered.small-10.small-centered.columns
-    .truck_image= image_tag(@truck.image_url)
-.row
-  .large-6.large-centered.small-10.small-centered.columns
-    %h3.orange= "Serves: " + @truck.description
-    %h4= link_to("Go to @" + @truck.twitter, "http://twitter.com/" + @truck.twitter)
-    %h5= link_to(number_to_phone(@truck.phone), "tel:#{@truck.phone}")
-    - if (@auth.present? && @auth.is_truck? && (@auth.userable.title == @truck.title))
-      %p= "Today's code is: #{@auth.userable.locations.last.secret_code}"
-    %p= @truck.about
+- if @auth.present?
+  .row
+    .large-12.columns.spacer
+  .row
+    .large-8.large-centered.small-10.small-centered.columns
+      %h1= @truck.title
+  .row
+    .large-8.large-centered.small-10.small-centered.columns
+      .truck_image= image_tag(@truck.image_url)
+  .row
+    .large-8.large-centered.small-10.small-centered.columns
+      %h3.orange= "Serves: " + @truck.description
+      %h4= link_to("Go to @" + @truck.twitter, "http://twitter.com/" + @truck.twitter)
+      %h5= link_to(number_to_phone(@truck.phone), "tel:#{@truck.phone}")
+      - if (@auth.present? && @auth.is_truck? && (@auth.userable.title == @truck.title))
+        %p= "Today's code is: #{@auth.userable.locations.last.secret_code}"
+      %p= @truck.about
 
+- else
+  .row
+    .large-12.columns.spacer
+  .row
+    .large-8.large-centered.small-10.small-centered.columns
+      %h1 Need to be a registered user, please register.

@@ -4,12 +4,13 @@
 #
 #  id          :integer          not null, primary key
 #  title       :string(255)
+#  about       :text
 #  description :text
 #  twitter     :string(255)
 #  phone       :string(255)
+#  image_url   :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  image_url   :string(255)
 #
 
 require 'spec_helper'
@@ -33,7 +34,7 @@ describe Truck do
 
   describe '.create' do
     it 'has an id' do
-      truck = Truck.create(title: 'test', description: 'test', twitter: 'test', phone: 'test')
+      truck = Truck.create(title: 'test', about: 'test', description: 'test', twitter: 'test', phone: 'test', image_url: 'test')
       expect(truck.id).to_not be nil
     end
     it 'title, description, twitter, phone fails validation when blank' do
@@ -44,12 +45,14 @@ describe Truck do
 
   describe '#metadata' do
     it 'has truck properties' do
-      truck = Truck.create(title: 'test', description: 'test', twitter: 'test', phone: 'test')
+      truck = Truck.create(title: 'test', about: 'test', description: 'test', twitter: 'test', phone: 'test', image_url: 'test')
       expect(truck.id).to_not be nil
       expect(truck.title).to eq 'test'
+      expect(truck.about).to eq 'test'
       expect(truck.description).to eq 'test'
       expect(truck.twitter).to eq 'test'
       expect(truck.phone).to eq 'test'
+      expect(truck.image_url).to eq 'test'
     end
   end
 end
