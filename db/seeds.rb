@@ -18,8 +18,8 @@ e1 = Eater.create(location: '10 East 21st Street, NY, NY')
 e2 = Eater.create(location: '10 East 21st Street, NY, NY')
 e3 = Eater.create(location: '10 East 21st Street, NY, NY')
 
-t1 = Truck.create(:title => 'Taco Bite', :description => 'Mexican', :twitter => 'tacobite' , :phone => '+19146498398', :image_url => 'https://si0.twimg.com/profile_images/3204720926/8a8410777aaf4392b78c968171aed1a7.jpeg' , :about => "Taco Bite has only been around since the end of the summer, but we have a good following, and deservedly so. While our taco fundamentals are solid, its our sauces that keep people coming back for more.")
-t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitter => 'LukesLobsterNY' , :phone => '+19179222816', :image_url => 'http://cbsnewyork.files.wordpress.com/2011/08/lukes-lobster-ny-02.jpg' , :about => "Lukes Lobster is New York Citys freshest, most affordable lobster roll ... straight from the docks of Maine. It doesnt take a master chef to make a great lobster roll; it takes great lobster. Luke Holden knows where to get the best stuff around ...")
+t1 = Truck.create(:title => 'Taco Bite', :description => 'Mexican', :twitter => 'tacobite' , :phone => '+19144838441', :image_url => 'https://si0.twimg.com/profile_images/3204720926/8a8410777aaf4392b78c968171aed1a7.jpeg' , :about => "Taco Bite has only been around since the end of the summer, but we have a good following, and deservedly so. While our taco fundamentals are solid, its our sauces that keep people coming back for more.")
+t2 = Truck.create(:title => 'Lukes Lobsters', :description => 'Seafood', :twitter => 'LukesLobsterNY' , :phone => '+16127030270', :image_url => 'http://cbsnewyork.files.wordpress.com/2011/08/lukes-lobster-ny-02.jpg' , :about => "Lukes Lobster is New York Citys freshest, most affordable lobster roll ... straight from the docks of Maine. It doesnt take a master chef to make a great lobster roll; it takes great lobster. Luke Holden knows where to get the best stuff around ...")
 t3 = Truck.create(:title => 'Mud Truck', :description => 'Coffee', :twitter => 'mudpeople' , :phone => '+19172512795' , :image_url => 'http://www.urban75.org/photos/newyork/images/ny561.jpg', :about => "We make the best cup of coffee in New York City and dont discriminate. The smokers smoked, the dogs had bones, and it played sweet soul music. And the chain was broken. And MUD was, is and MUD will be.")
 t4 = Truck.create(:title => 'Crusin Kitchen', :description => 'American', :twitter => 'Cruisin_Kitchen' , :phone => '+17175033849' , :image_url => 'https://pbs.twimg.com/media/A1D2_XWCQAAcsxm.jpg', :about => "For all of you (like me) who have noticed that the area in your brain controlling your sense of humor experienced arrested development at age 13, youll be happy to know that balls are now at your fingertips.")
 t5 = Truck.create(:title => 'Taim Mobile', :description => 'Middle Eastern', :twitter => 'TaimMobile' , :phone => '+17175033849' , :image_url => 'https://pbs.twimg.com/media/BDKytIZCAAAGNlB.jpg', :about => "The inspiration for Taim came from the streets of Tel Aviv, so its only fitting that its now going to be serving the streets of New York City.")
@@ -67,8 +67,8 @@ l2.save
 l3.truck = t3
 l3.save
 
-t1.locations << l1
-t2.locations << l2
+#t1.locations << l1
+#t2.locations << l2
 t3.locations << l3
 t4.locations << l4
 t5.locations << l5
