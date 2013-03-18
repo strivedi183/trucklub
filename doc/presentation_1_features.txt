@@ -1,0 +1,52 @@
+Notes for presentation 1, Mar 18, 2013
+
++++++++++++ SETUP 4 accounts - one for Chyld's truck, and for another student (truck owner), one for admin, one for logged in eater with 9 meal_counts. pushed to Heroku
+
++++++++++++
+
+
+Presenting Lunchy Punchy, the premiere food truck loyalty card platform.
+
+
+RALPH
+food trucks are awesome, and in case you havent noticed, we are living in The golden age of food trucks.   On friday I got 3 burritos for lunch!
+Although the actual food is amazing from these trucks, the whole experience is not that great. They're kind of difficult to find, sometimes, the waits are too long, and they can be a little pricey.  Well we're here to fix that!
+
+We are solving 2 problems #1- as a truck owner, how do you get more customers to your truck and increase revenue? And 2; as a busy New Yorker, how do you maximize your lunch hour?
+
+So here's the pitch: we are a loyalty card service exclusively for the premier food trucks in NYC.
+
+Lets start the demo.
+
+SANDIP
+ok. Let's say you are a truck owner, let's take you through the workflow. You hear our pitch, and you want to become a member. We take you through the onboarding process, and now you have an account on our system. We ask all of our truck owners to fill out a profile where we ask you things like your truck name, your twitter account, and your mobile number.
+
+SO we have created this account here for Chyld's Burrito Truck
+
+++++++++++++ SHOW LOGIN PAGE (DESKTOP) Log in as Chyld, show his truck Make a note of his cell phone ++++++++++
+++++++++++++ Ask if anyone else wants to be a truck owner for this demo, log in as XXXXXXXXX and change their number++++++++
+
+OK, so now you're in our system.  Truck drivers start their days early, and they're really busy, so we want to make this as painless for them as possible, So each morning, we automatically send them an SMS with a randomly generated word that is their secret code for the day.
+
+++++++++++ Pull up IOS simulator, log in, and see that the trucks for chyld and vounteer are NOT in the home screen
+
+Here we see what an end user would look at it. we  decided from the start that this app would be optimized for mobile right away since the whole food truck experience is best done outdoors.
+
++++++++++++  off stage SMS is sent to chyld and the other volunteer. Hopefully they get a ridiculous word ++++++++++++++
++++++++++++ instruct the recipients to enter the address where thery're going to be for the day.
+
+RON
+We used the IOS simulator that ships with xcode to continuously tweak how our app would look and behave as we were developing and testing the app.
+
+++++++++++ Demo the login screen, talk about the loyalty card. The logged in user has 9 meals. The plan is that the trucks are actually a syndicate, and your 10th meal is free at any one of the participating trucks.
+
+SO i find chyld's truck, I order 1 burrito, and he gives me a code. you can imagine that this would be a great time to add a foursquare checkin.  that's on the roadmap.
+
++++++++++ demo card count goes up. Demo user has 10th burrito and it's the free one!
+
+Tony
+we worked amazingly well as a team, and it was a pleasure building this. we have over 30 tests, and we do some real ninja shit in this code.
+
++++ demo admin account, phone link, show pivotal tracker
+
+We did everything by the book, using pivotal tracker and lots of beer. it was awesome.
