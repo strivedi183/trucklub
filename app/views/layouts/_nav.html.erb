@@ -21,7 +21,7 @@
         <% if (@auth.present? && @auth.is_eater?) %>
         <li><%= link_to_function "My Loyalty Card", 'show_card();', :class => "button radius" %></li>
         <li class="divider"></li>
-        <li><a href="#" class="button prefix show_code_button">Enter Code</a></li>
+        <li><a href="#" class="button radius prefix show_code_button">Enter Code</a></li>
         <% end %>
       </ul>
 

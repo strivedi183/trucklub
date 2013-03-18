@@ -12,7 +12,7 @@ module ApplicationHelper
     "<li><a href='#' class='button prefix show_code_button'>Enter Code</a></li>"
     "<li class='divider'></li>"
     "<li><input class = 'hide code_form' type='text' placeholder='Meal code'></li>"
-    "<li><a href='#' class='hide button success prefix create_code_button'>Submit Code</a></li>"
+    "<li><a href='#' class='hide button radius success prefix create_code_button'>Submit Code</a></li>"
     "<li><p class='error_code hide'>invalid</p></li>"
   end
 end
