@@ -17,7 +17,7 @@
             %h3.inline-block.bottom_up= link_to(location.truck.title, "/trucks/" + location.truck.id.to_s)
             %p.orange.bottom_up.bold= location.truck.description
             %p.bold= link_to("@" + location.truck.twitter, "http://twitter.com/" + location.truck.twitter)
-            %p.tiny_address= "Currently at: " + location.address
+            / %p.tiny_address= "Currently at: " + location.address
       .clear
     .row
       .large-12.columns.spacer
