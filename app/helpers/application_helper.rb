@@ -3,7 +3,7 @@ module ApplicationHelper
     if @auth.present?
       "<li>#{link_to('Logout', '/login', :method => :delete, :class => 'button')}</li>"
     else
-      "<li>#{link_to('Login to trucKlub', login_path)}</li>"
+      "<li>#{link_to('Login to LunchyPunchy', login_path)}</li>"
     end
   end
 
