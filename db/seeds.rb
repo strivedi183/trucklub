@@ -56,7 +56,7 @@ m13 = Meal.create(meal_date: '2013-01-07', meal_time: '12:45')
 m14 = Meal.create(meal_date: '2012-01-08', meal_time: '11:45')
 m15 = Meal.create(meal_date: '2011-01-09', meal_time: '23:00')
 
-e1.meals << m1 << m2 << m4 << m6
+e1.meals << m1 << m2 << m4 << m6 << m7 << m8 << m9 << m10 << m11
 e2.meals << m3
 e3.meals << m5
 
